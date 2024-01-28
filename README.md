@@ -8,8 +8,10 @@ Authors: [Mathew Winkles](https://github.com/Mathyu03), [Janelle Gwynn](https://
 ## Project Description
 
 * Why is it important to us?
-      *test
-           *test
+      * Bullet list
+              * Nested bullet
+                  * Sub-nested bullet etc
+          * Bullet list item 2
 
 
  > Your project description should summarize the project you are proposing. Be sure to include:
