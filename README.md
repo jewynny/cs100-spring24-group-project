@@ -7,11 +7,23 @@ Authors: [Mathew Winkles](https://github.com/Mathyu03), [Janelle Gwynn](https://
 
 ## Project Description
 
-* Why is it important to us?
-      * Bullet list
-              * Nested bullet
-                  * Sub-nested bullet etc
-          * Bullet list item 2
+### Why is it important to us?
+* Music is a big part of our group members' lives, and we would like to connect to others through music, as well as ourselves
+### What languages/tools/technologies do we plan to use?
+* Our backend will be programmed using C++
+* We plan to use the Spotify API to manipulate playlists, using songs and their respective metadata
+### What will be the input/output of your project?
+* Output will prompt user to create a user profile
+* Alternatively, the user can link their spotify account to skip this step (if applicable)
+* Afterwards, the program will collect data of the users favorite songs/genres/producers/etc.
+* User will get output for a list of 10 recommended songs based on the input from the previous steps
+* User can either continue and get more songs in increments of 10, or choose to make another user profile, repeating the same steps as before
+* If there are 2 user profiles in the system, user has the option to compare these profiles. They will receive an output for a playlist of another 10 songs, matching the preferences of both combined users.
+### What are the features that the project provides?
+* Ability to make multiple user profiles with favorite songs/genres/producers/etc. 
+* Recommends similar songs based on the users music preferences
+* Can compare music tastes with other users by creating a merged playlist with similar vibes
+ 
 
 
  > Your project description should summarize the project you are proposing. Be sure to include:
