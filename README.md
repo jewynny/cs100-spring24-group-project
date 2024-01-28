@@ -13,24 +13,17 @@ Authors: [Mathew Winkles](https://github.com/Mathyu03), [Janelle Gwynn](https://
 * Our backend will be programmed using C++
 * We plan to use the Spotify API to manipulate playlists, using songs and their respective metadata
 ### What will be the input/output of your project?
-* Output will prompt user to create a user profile
+* Output will prompt user to create a user profile 
 * Alternatively, the user can link their spotify account to skip this step (if applicable)
 * Afterwards, the program will collect data of the users favorite songs/genres/producers/etc.
 * User will get output for a list of 10 recommended songs based on the input from the previous steps
 * User can either continue and get more songs in increments of 10, or choose to make another user profile, repeating the same steps as before
 * If there are 2 user profiles in the system, user has the option to compare these profiles. They will receive an output for a playlist of another 10 songs, matching the preferences of both combined users.
 ### What are the features that the project provides?
-* Ability to make multiple user profiles with favorite songs/genres/producers/etc. 
-* Recommends similar songs based on the users music preferences
-* Can compare music tastes with other users by creating a merged playlist with similar vibes
+* Ability to make multiple user profiles with favorite songs/genres/producers/etc. (User profile class with individual characteristics/variables)
+* Recommends similar songs based on the users music preferences (Pulled from spotify API, matching the characteristics outlined above)
+* Can compare music tastes with other users by creating a merged playlist with similar vibes (Finds matches between two user profiles, and pulls from spotify API using combined characteristics)
  
-
-
- > Your project description should summarize the project you are proposing. Be sure to include:
- > * Why is it important or interesting to you?
- > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
- > * What will be the input/output of your project?
- > * What are the features that the project provides?
  > This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
  > 
  > You also need to set up an empty project board using GitHub projects (board view with default columns). Make sure you add the board under your project repository. You should also have a Product Backlog and In testing columns added. All columns should be in the right order.
