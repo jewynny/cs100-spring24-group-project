@@ -35,18 +35,16 @@ Authors: [Mathew Winkles](https://github.com/Mathyu03), [Janelle Gwynn](https://
  >   * The second check-in should be scheduled with a reader. During that meeting you will discuss:
  >     * The tasks you are planning for the first sprint
  >     * How work will be divided between the team members
-## User Interface Specification
- > Include a navigation diagram for your screens and the layout of each of those screens as desribed below. For all the layouts/diagrams, you can use any tool such as PowerPoint or a drawing program. (Specification requirement is adapted from [this template](https://redirect.cs.umbc.edu/~mgrass2/cmsc345/Template_UI.doc))
 
-### Navigation Diagram
+### Navigation Diagram / User Interface Specification
 ![image](https://github.com/cs100/final-project-mwink004-jhamo001-jcara025-wye024/assets/99463753/ab02d697-d7cd-4d8c-b357-3916645314db)
-
 
 ### Screen Layouts
 > Include the layout of each of your screens. The layout should describe the screen’s major components such as menus and prompts for user inputs and expected output, or any graphical user interface components if applicable (e.g. buttons, text boxes, etc). Explain what is on the layout, and the purpose of each menu item, button, etc. If many screens share the same layout, start by describing the general layout and then list the screens that will be using that layout and the differences between each of them.
 
-## Class Diagram (UML)
-![aC7SFf9](https://github.com/cs100/final-project-mwink004-jhamo001-jcara025-wye024/assets/99463753/430ab5c3-6b5a-4a12-84ab-4f9a717c6d6e)
+### Class Diagram (UML)
+![azsr6UG](https://github.com/cs100/final-project-mwink004-jhamo001-jcara025-wye024/assets/99463753/a18bcdbb-c340-4daa-ad72-afa768f967c3)
+
 
  
  > ## Phase III
