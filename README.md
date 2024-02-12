@@ -5,7 +5,7 @@
  
 Authors: [Mathew Winkles](https://github.com/Mathyu03), [Janelle Gwynn](https://github.com/jewynny), [Joseph Caraan](https://github.com/jczy3), [Fiona Ye](https://github.com/fionaye3)
 
-## Project Description
+## Project Description (Phase I)
 
 ### Why is it important to us?
 * Music is a big part of our group members' lives, and we would like to connect to others through music, as well as ourselves
@@ -23,6 +23,8 @@ Authors: [Mathew Winkles](https://github.com/Mathyu03), [Janelle Gwynn](https://
 * Ability to make multiple user profiles with favorite songs/genres/producers/etc. (User profile class with individual characteristics/variables)
 * Recommends similar songs based on the users music preferences (Pulled from spotify API, matching the characteristics outlined above)
 * Can compare music tastes with other users by creating a merged playlist with similar vibes (Finds matches between two user profiles, and pulls from spotify API using combined characteristics)
+
+## Design Document (Phase II)
 
 ### Navigation Diagram / User Interface Specification
 ![image](https://github.com/cs100/final-project-mwink004-jhamo001-jcara025-wye024/assets/99463753/ab02d697-d7cd-4d8c-b357-3916645314db)
