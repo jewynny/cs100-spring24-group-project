@@ -40,7 +40,48 @@ Authors: [Mathew Winkles](https://github.com/Mathyu03), [Janelle Gwynn](https://
 ![image](https://github.com/cs100/final-project-mwink004-jhamo001-jcara025-wye024/assets/99463753/ab02d697-d7cd-4d8c-b357-3916645314db)
 
 ### Screen Layouts
-> Include the layout of each of your screens. The layout should describe the screen’s major components such as menus and prompts for user inputs and expected output, or any graphical user interface components if applicable (e.g. buttons, text boxes, etc). Explain what is on the layout, and the purpose of each menu item, button, etc. If many screens share the same layout, start by describing the general layout and then list the screens that will be using that layout and the differences between each of them.
+* Messages and text are STC, but this will give the general idea of what the screens will look like in the terminal.
+```
+// Welcome Screen Menu
+Welcome! Song Recommender
+
+// Users
+Start by creating a user profile
+-----------------------------------------------
+Name :
+Favorite Song :
+Playlist Name :
+
+-----------------------------------------------
+// Make Playlist
+Hello <user name>
+Do you want to make a playlist? Y/N :
+-----------------------------------------------
+// Reccomendations
+Song Recommendations Based on Your Fave Song
+-----------------------------------------------
+1. song 1
+2. song 2
+...
+10. song 10
+
+Which songs would you like to add (enter each 
+corresponding # and enter "done" when completed)
+
+Playlist : (users playlist name)
+-----------------------------------------------
+1. song 1                     Author 1, Album 1
+2. song 2                     Author 2, Album 2
+
+*********************
+total duration : 455s
+
+Actions
+1. remove song
+2. ask for more reccomendations
+3. finish playlist
+4. start new playlist
+```
 
 ### Class Diagram (UML)
 ![azsr6UG](https://github.com/cs100/final-project-mwink004-jhamo001-jcara025-wye024/assets/99463753/a18bcdbb-c340-4daa-ad72-afa768f967c3)
