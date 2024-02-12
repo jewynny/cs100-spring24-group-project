@@ -26,6 +26,8 @@ Authors: [Mathew Winkles](https://github.com/Mathyu03), [Janelle Gwynn](https://
 
 ## Design Document (Phase II)
 
+* Epics and user stories can be seen in the projects tab
+
 ### Navigation Diagram / User Interface Specification
 ![image](https://github.com/cs100/final-project-mwink004-jhamo001-jcara025-wye024/assets/99463753/ab02d697-d7cd-4d8c-b357-3916645314db)
 
