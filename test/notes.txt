@@ -1,0 +1,5 @@
+this is just an empty text file - jan
+(we will use this for unit testing and adding the gtest file)
+
+command to add gtest:
+$ git submodule add https://github.com/google/googletest.git
