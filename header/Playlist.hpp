@@ -6,6 +6,6 @@ class Playlist {
 
     private:
 
-}
+};
 
 #endif  //PLAYLIST_HPP
