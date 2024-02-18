@@ -76,8 +76,14 @@ Actions
 ```
 
 ### Class Diagram (UML)
-![azsr6UG](https://github.com/cs100/final-project-mwink004-jhamo001-jcara025-wye024/assets/99463753/a18bcdbb-c340-4daa-ad72-afa768f967c3)
+<img width="436" alt="Screenshot_2024-02-16_at_3 47 15_PM" src="https://github.com/cs100/final-project-mwink004-jhamo001-jcara025-wye024/assets/99463753/0d27a220-3ae5-4d76-8409-567020c470d8">
 
+
+### Class Diagram Description
+* A user class is needed to use the program. Each user has a name to identify them as well as a favorite song. The faveSong string is for giving a basis for recommendations for the user later on. The member functions consist of setters for the name and faveSong (setName, setFaveSong). There also are functions for making a playlist (makePlaylist, discussed in next bullet point) and one for viewing all the playlists the user has made (viewPlaylists).
+* The playlist class is something that can be made by the user. It has a HAS-A relationship with the user, a User can have a a Playlist. Each playlist has a name (playlistName) and it consists of a list of song objects (list<Song*>). The member functions of a playlist consist of printSongs to print all the songs in the playlist, addSong to add a song to the playlist, removeSong to remove a song from the playlist, getRecommendations to get 10 songs based off the users interests, and setPlaylistName for a setter for the object.
+* The song class has a composition relationship with playlist. This is becuase within the functionality of our program, you can't have a song by itself, it will be in a playlist or have no functionality. Each song has a genre, duration, producer, and album. The member functions within song print the aforementioned variables.
+* Lastly, there is a Recommendations class. It has a dependency relationship with Playlist, since Playlist returns the recommendations in one of its member functions. It consists of a list of songs as well, but these are fixed to 10 at a time. You can do the same thing with these songs as the ones from the songs class, however it has an added member function addToPlaylist. This is for if the user likes one or more of the recommendations and wants to add it to a playlist they own.
 
  
  > ## Phase III
