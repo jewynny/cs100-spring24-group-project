@@ -20,7 +20,7 @@ void printMenu()
     user.setName(userName);
     user.setFaveSong(faveSong);
 
-    cout << "Hello " << userName    
+    cout << "Hello " << userName;    
 
 }
 
