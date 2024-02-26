@@ -9,6 +9,8 @@
 class User {
     public: 
     // i made these inline, but we can change these - jan
+    User();
+    ~User();
     void setName(std::string userName) { name = userName; }
     void setFaveSong(std::string song) { faveSong = song; }
     void makePlaylist();
