@@ -8,9 +8,21 @@
 
 class User {
     public: 
-    // i made these inline, but we can change these - jan
+    User()
+    {
+        name = "";
+        faveSong = "";
+    }
+    User(std::string n, std::string fS)
+    {
+        name = n;
+        faveSong = fS;
+    }
+    /*
+    might need these later idk
     void setName(std::string userName) { name = userName; }
     void setFaveSong(std::string song) { faveSong = song; }
+    */
     void makePlaylist();
     void viewPlaylist();
 

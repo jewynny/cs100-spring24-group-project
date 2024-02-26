@@ -2,25 +2,26 @@
 #include "../header/User.hpp"
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
 void printMenu()
 {
-    User user;
+    vector<User> profiles;
     string userName;
     string faveSong;
 
-    cout << "Welcome to Spotilike Music Recommender!";
-    cout << "To begin, please create a user profile.";
+    cout << "Welcome to Spotilike Music Recommender!" << endl;
+    cout << "To begin, please create a user profile." << endl;
     cout << "Name: ";
     getline(cin, userName);
     cout << "\nFavorite song: ";
     getline(cin, faveSong);
-    user.setName(userName);
-    user.setFaveSong(faveSong);
+    User user1(userName, faveSong);
+    profiles.push_back(user1);
 
-    cout << "Hello " << userName    
+    cout << "Hello " << 
 
 }
 
