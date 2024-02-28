@@ -3,18 +3,23 @@
 
 //FILES
 #include "../header/Song.hpp"
+#include <vector>
 
+using namespace std;    //could take out
 
 class Playlist {
-    public: 
+    public:
+    Playlist(); 
+    Playlist(std::string name);
     void printSongs();
-    void addSongs(Song songToAdd);
-    void removeSong();
+    void addSongs(Song *songToAdd);
+    // int findSong(); to maybe use with remove song?
+    void removeSong(int index);
     void getReccomendations();
     void setPlaylistName(std::string name) { PlaylistName = name; }
 
     private:
-    std::list<Song*> Songs;
+    vector<Song*> Songs;
     std::string PlaylistName;
 
 };
