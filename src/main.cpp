@@ -59,6 +59,14 @@ int main(){
     }
   }
 
+  cout << "Would you like to see the playlists that are tied to your profile? y or n " << endl;
+  string seePlaylists;
+  cin >> seePlaylists;
+  if (seePlaylists == "y"){
+    (*profiles)[i].viewPlaylists();
+  }
+
+return 0;
 }
 
 void createProfileMenu(User profile)
