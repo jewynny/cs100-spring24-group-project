@@ -16,6 +16,8 @@ class User {
     void viewPlaylistSongs();
     void viewPlaylists();
 
+    //getters need to implement ...
+
     private:
     std::string name;
     std::string faveSong;
