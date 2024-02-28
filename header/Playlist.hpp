@@ -8,7 +8,7 @@
 class Playlist {
     public: 
     void printSongs();
-    void addSongs();
+    void addSongs(Song songToAdd);
     void removeSong();
     void getReccomendations();
     void setPlaylistName(std::string name) { PlaylistName = name; }
