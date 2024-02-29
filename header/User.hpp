@@ -2,7 +2,7 @@
 #define USER_HPP
 
 #include "../header/Playlist.hpp"
-
+#include <vector>
 #include <iostream>
 // using namespace std;
 
@@ -31,7 +31,7 @@ class User {
     private:
     std::string name;
     std::string faveSong;
-    vector<Playlist> playlists;
+    std::vector<Playlist> playlists;
 };
 
 #endif  //USER_HPP
