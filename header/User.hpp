@@ -4,6 +4,7 @@
 #include "../header/Playlist.hpp"
 
 #include <iostream>
+#include <vector>
 // using namespace std;
 
 class User {
@@ -17,6 +18,7 @@ class User {
     private:
     std::string name;
     std::string faveSong;
+    std::vector<Playlist> Playlist;
 
 };
 
