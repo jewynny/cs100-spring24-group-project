@@ -8,15 +8,15 @@
 
 class User {
     public: 
-    User()
+    User::User()
     {
         name = "";
         faveSong = "";
     }
-    User(std::string n, std::string fS)
+    User::User(std::string userName, std::string userFavoriteSong)
     {
-        name = n;
-        faveSong = fS;
+        name = userName;
+        faveSong = userFavoriteSong;
     }
     /*
     might need these later idk
@@ -26,10 +26,12 @@ class User {
     void makePlaylist();
     void viewPlaylist();
 
+    User::~User(); // for joseph to do hehe
+
     private:
     std::string name;
     std::string faveSong;
-
+    vector<Playlist> playlists;
 };
 
 #endif  //USER_HPP
