@@ -86,17 +86,15 @@ Actions
 * Lastly, there is a Recommendations class. It has a dependency relationship with Playlist, since Playlist returns the recommendations in one of its member functions. It consists of a list of songs as well, but these are fixed to 10 at a time. You can do the same thing with these songs as the ones from the songs class, however it has an added member function addToPlaylist. This is for if the user likes one or more of the recommendations and wants to add it to a playlist they own.
 
  
- > ## Phase III
- > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on week 8 during lab time.
- 
- > BEFORE the meeting you should do the following:
- > * Update your class diagram from Phase II to include any feedback you received from your TA/grader.
- > * Considering the SOLID design principles, reflect back on your class diagram and think about how you can use the SOLID principles to improve your design. You should then update the README.md file by adding the following:
- >   * A new class diagram incorporating your changes after considering the SOLID principles.
- >   * For each update in your class diagram, you must explain in 3-4 sentences:
- >     * What SOLID principle(s) did you apply?
- >     * How did you apply it? i.e. describe the change.
- >     * How did this change help you write better code?
+## Development/Testing (Phase III)
+
+### Updated UML class diagram w/ SOLID
+![J1eo0aD](https://github.com/cs100/final-project-mwink004-jhamo001-jcara025-wye024/assets/99463753/90de8e4c-1a7b-4620-9d85-3f71427e55ff)
+The first change we made to our class diagram was removing setters/getters from the diagram. We did so because they added excess noise from the diagram. Now, classes only show their fields and methods which is much cleaner. This change didn't require applying SOLID principles. We also updated our UML diagram to reflect design changes we made in our program.
+We also updated the class diagram by removing the makePlaylist function from User. This is because before, it was violating the single responsibility principle (SRP). The user's job is to hold its playlists, not make them. So, we moved makePlaylist to the Playlist class where it belongs, since that is the classes job to handle playlists.
+Similarly, we moved the getRecommendations function from the Playlist class to the Recommendation class. The playlist class violated SRP since it was managing both playlists and recommendations. Now, functions are not needlessly mixed up and everything is more organized. By standardizing the vocabulary, stakeholders for example (or for us, all project members) can better understand the expectations for the respective classes. The code becomes better since there are fewer difficulties arising from needless interdependencies. 
+Lastly, we removed the addToPlaylist function from the Recommendations class, since it was violating SRP as well. We moved it to the Playlist class instead so that each class only has one responsibility, and don't overlap with eachother. Much like the last change, the respective classes are both more concise and organized.
+
  > * Perform a new sprint plan like you did in Phase II.
  > * You should also make sure that your README file (and Project board) are up-to-date reflecting the current status of your project and the most recent class diagram. Previous versions of the README file should still be visible through your commit history.
  
