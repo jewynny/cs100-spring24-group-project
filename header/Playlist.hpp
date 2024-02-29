@@ -14,7 +14,7 @@ class Playlist {
     void setPlaylistName(std::string name) { PlaylistName = name; }
 
     private:
-    std::list<Song*> Songs;
+    std::vector<Song*> Songs;
     std::string PlaylistName;
 
 };
