@@ -64,7 +64,7 @@ int main(){
   }
 
 return 0;
-
+  
 }
 
 void createProfileMenu(User profile)
@@ -114,4 +114,3 @@ void printPlaylist(User profile){
   // PROMPT USER
   cout << "Playlist : " << playlist.getName();
 }
-
