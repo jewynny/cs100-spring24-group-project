@@ -15,8 +15,7 @@ void printPlaylist(User profile);
 int main(){
 
   // VARIBLES
-  vector<User> *profiles 
-    new vector<User>;
+  vector<User> *profiles = new vector<User>;
   int totalProfile = 1;
   profiles->resize(totalProfile);
   cout << "Welcome to Spotilike Music Recommender!";
@@ -31,8 +30,8 @@ int main(){
   printPlaylist(profiles->at(0));
   totalProfile++;
   
+  //create new profiles
 
-  //create another profile
   cout << "Would you like to create another profile? (y/n)";
   string anotherProfile;
   cin >> anotherProfile;
@@ -65,9 +64,6 @@ int main(){
   }
 
 return 0;
-
-  cout << "Would you like to change to an existing profiles? " << endl;
-  // fiona :3
 
 }
 

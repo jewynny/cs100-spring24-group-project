@@ -7,12 +7,14 @@
 // using namespace std;
 
 class User {
+    
     public: 
     User::User()
     {
         name = "";
         faveSong = "";
     }
+
     User::User(std::string userName, std::string userFavoriteSong)
     {
         name = userName;
