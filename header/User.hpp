@@ -2,27 +2,39 @@
 #define USER_HPP
 
 #include "../header/Playlist.hpp"
-using namespace std;
-#include <iostream>
 #include <vector>
+#include <iostream>
 // using namespace std;
 
 class User {
     public: 
-    // i made these inline, but we can change these - jan
+    User::User()
+    {
+        name = "";
+        faveSong = "";
+    }
+    User::User(std::string userName, std::string userFavoriteSong)
+    {
+        name = userName;
+        faveSong = userFavoriteSong;
+    }
+    /*
+    might need these later idk
     void setName(std::string userName) { name = userName; }
     void setFaveSong(std::string song) { faveSong = song; }
+    */
     void makePlaylist();
     void viewPlaylistSongs();
     void viewPlaylists();
 
     //getters need to implement ...
 
+    User::~User(); // for joseph to do hehe
+
     private:
     std::string name;
     std::string faveSong;
-    vector<Playlist*> playlists;
-
+    std::vector<Playlist> playlists;
 };
 
 #endif  //USER_HPP

@@ -1,10 +1,5 @@
-// empty main 
-// UNCOMMENT BEFORE MOVING INTO VSCODE
-// #include "../header/Playlist.hpp"
-// #include "../header/User.hpp"
-
-#include "Playlist.hpp"
-#include "User.hpp"
+#include "../header/Playlist.hpp"
+#include "../header/User.hpp"
 #include <iostream>
 #include <string>
 #include <vector>
@@ -20,7 +15,8 @@ void printPlaylist(User profile);
 int main(){
 
   // VARIBLES
-  vector<User> *profiles = new vector<User>;
+  vector<User> *profiles 
+    new vector<User>;
   int totalProfile = 1;
   profiles->resize(totalProfile);
   cout << "Welcome to Spotilike Music Recommender!";
@@ -35,6 +31,7 @@ int main(){
   printPlaylist(profiles->at(0));
   totalProfile++;
   
+
   //create another profile
   cout << "Would you like to create another profile? (y/n)";
   string anotherProfile;
@@ -47,6 +44,7 @@ int main(){
     cin >> anotherProfile;
     totalProfile++;
   }
+
   //switch between profiles
   cout << "/n Please enter the profile name to choose a profile." << endl;
   string name;
@@ -67,6 +65,10 @@ int main(){
   }
 
 return 0;
+
+  cout << "Would you like to change to an existing profiles? " << endl;
+  // fiona :3
+
 }
 
 void createProfileMenu(User profile)
@@ -84,8 +86,7 @@ void createProfileMenu(User profile)
     cout << "Thank you for creating a profile!" << endl;
 
     // SET USER PROFILE
-    profile.setName(userName);
-    profile.setFaveSong(faveSong);  
+    User(userName, faveSong); 
 }
 
 void makePlaylistMenu(User profile) {
@@ -109,5 +110,12 @@ void reccomendationsMenu(User profile){
   for (int i=1;i<=10;i++){
     cout << i << ". " << reccomendation << endl;
   }
+}
+
+void printPlaylist(User profile){
+  // VARIABLES
+  
+  // PROMPT USER
+  cout << "Playlist : " << playlist.getName();
 }
 
