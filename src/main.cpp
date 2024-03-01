@@ -64,7 +64,6 @@ int main(){
   }
 
 return 0;
-
 }
 
 void createProfileMenu(User profile)
@@ -93,9 +92,7 @@ void makePlaylistMenu(User profile) {
   cout << "Hello " << profile.getName() << endl;
   cout << "Enter the name of your playlist: ";
   getline(cin, playlistName);
-
-    profile.addAPlaylist(playlistName);
-
+  profile.addAPlaylist(playlistName);
 }
 
 void reccomendationsMenu(User profile){

@@ -20,7 +20,6 @@ void User::viewPlaylists(){
         cout << i+1 << ": " << playlists.at(i)->getPlaylistName() << endl;
     }
     cout << "Enjoy!" << endl;
-
 }
 
 void User::addAPlaylist(std::string playlistName){
