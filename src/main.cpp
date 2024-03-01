@@ -1,4 +1,3 @@
-// UNCOMMENT BEFORE MOVING INTO VSCODE
 #include "../header/Playlist.hpp"
 #include "../header/User.hpp"
 #include <iostream>
@@ -16,7 +15,8 @@ void printPlaylist(User profile);
 int main(){
 
   // VARIBLES
-  vector<User> *profiles = new vector<User>;
+  vector<User> *profiles 
+    new vector<User>;
   int totalProfile = 1;
   profiles->resize(totalProfile);
   cout << "Welcome to Spotilike Music Recommender!";
@@ -25,14 +25,14 @@ int main(){
   // increment when another profile is made
   (*profiles)[0] = User();
   
-  // still dont quite get this please explain to me before we merge sob
   createProfileMenu(profiles->at(0));
   makePlaylistMenu(profiles->at(0));
   reccomendationMenu(profiles->at(0));
   printPlaylist(profiles->at(0));
   totalProfile++;
   
-  // thanks fiona i guess lmaooo
+
+  //create another profile
   cout << "Would you like to create another profile? (y/n)";
   string anotherProfile;
   cin >> anotherProfile;
@@ -44,8 +44,31 @@ int main(){
     cin >> anotherProfile;
     totalProfile++;
   }
+
+  //switch between profiles
+  cout << "/n Please enter the profile name to choose a profile." << endl;
+  string name;
+  getline(cin, name);
+  int i = 0;
+  for(i = 0; i<totalProfile; ++i){
+    if ((*profiles)[i].getName()==name){
+      cout << "You are in profile " << name << " right now, enjoy!"<< endl;
+      exit;
+    }
+  }
+
+  cout << "Would you like to see the playlists that are tied to your profile? y or n " << endl;
+  string seePlaylists;
+  cin >> seePlaylists;
+  if (seePlaylists == "y"){
+    (*profiles)[i].viewPlaylists();
+  }
+
+return 0;
+
   cout << "Would you like to change to an existing profiles? " << endl;
   // fiona :3
+
 }
 
 void createProfileMenu(User profile)
@@ -95,3 +118,4 @@ void printPlaylist(User profile){
   // PROMPT USER
   cout << "Playlist : " << playlist.getName();
 }
+

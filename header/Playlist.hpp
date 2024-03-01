@@ -3,15 +3,17 @@
 
 //FILES
 #include "../header/Song.hpp"
+using namespace std;
 
 
 class Playlist {
     public: 
     void printSongs();
-    void addSongs();
+    void addSongs(Song* songToAdd);
     void removeSong();
     void getReccomendations();
     void setPlaylistName(std::string name) { PlaylistName = name; }
+    string getPlaylistName() {return PlaylistName;}
 
     private:
     std::list<Song*> Songs;

@@ -24,7 +24,10 @@ class User {
     void setFaveSong(std::string song) { faveSong = song; }
     */
     void makePlaylist();
-    void viewPlaylist();
+    void viewPlaylistSongs();
+    void viewPlaylists();
+
+    //getters need to implement ...
 
     User::~User(); // for joseph to do hehe
 
