@@ -25,7 +25,7 @@ class User {
     void setName(std::string userName) { name = userName; }
     void setFaveSong(std::string song) { faveSong = song; }
     */
-    void makePlaylist();
+    void addAPlaylist(std::string playlistName);
     void viewPlaylistSongs();
     void viewPlaylists();
 

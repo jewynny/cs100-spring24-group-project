@@ -8,7 +8,7 @@ using namespace std;
 
 //functions
 void createProfileMenu(User profile);
-void makePlaylistMenu(User profile);
+void makePlaylistMenu(User profile);        // call every time user wants to make a new playlist
 void reccomendationMenu(User profile);
 void printPlaylist(User profile);
 
@@ -64,7 +64,6 @@ int main(){
   }
 
 return 0;
-  
 }
 
 void createProfileMenu(User profile)
@@ -93,8 +92,7 @@ void makePlaylistMenu(User profile) {
   cout << "Hello " << profile.getName() << endl;
   cout << "Enter the name of your playlist: ";
   getline(cin, playlistName);
-
-  // call make playlist (?)
+  profile.addAPlaylist(playlistName);
 }
 
 void reccomendationsMenu(User profile){
