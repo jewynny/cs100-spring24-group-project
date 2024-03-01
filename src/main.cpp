@@ -1,4 +1,3 @@
-// UNCOMMENT BEFORE MOVING INTO VSCODE
 #include "../header/Playlist.hpp"
 #include "../header/User.hpp"
 #include <iostream>
@@ -32,6 +31,7 @@ int main(){
   totalProfile++;
   
   //create new profiles
+
   cout << "Would you like to create another profile? (y/n)";
   string anotherProfile;
   cin >> anotherProfile;
@@ -43,8 +43,28 @@ int main(){
     cin >> anotherProfile;
     totalProfile++;
   }
-  cout << "Would you like to change to an existing profiles? " << endl;
-  //....
+
+  //switch between profiles
+  cout << "/n Please enter the profile name to choose a profile." << endl;
+  string name;
+  getline(cin, name);
+  int i = 0;
+  for(i = 0; i<totalProfile; ++i){
+    if ((*profiles)[i].getName()==name){
+      cout << "You are in profile " << name << " right now, enjoy!"<< endl;
+      exit;
+    }
+  }
+
+  cout << "Would you like to see the playlists that are tied to your profile? y or n " << endl;
+  string seePlaylists;
+  cin >> seePlaylists;
+  if (seePlaylists == "y"){
+    (*profiles)[i].viewPlaylists();
+  }
+
+return 0;
+
 }
 
 void createProfileMenu(User profile)
@@ -62,8 +82,7 @@ void createProfileMenu(User profile)
     cout << "Thank you for creating a profile!" << endl;
 
     // SET USER PROFILE
-    profile.setName(userName);
-    profile.setFaveSong(faveSong);  
+    User(userName, faveSong); 
 }
 
 void makePlaylistMenu(User profile) {
@@ -95,3 +114,4 @@ void printPlaylist(User profile){
   // PROMPT USER
   cout << "Playlist : " << playlist.getName();
 }
+

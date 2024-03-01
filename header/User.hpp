@@ -9,27 +9,34 @@
 class User {
     
     public: 
-    User()
+    User::User()
     {
         name = "";
         faveSong = "";
     }
-    User(std::string n, std::string fS)
+
+    User::User(std::string userName, std::string userFavoriteSong)
     {
-        name = n;
-        faveSong = fS;
+        name = userName;
+        faveSong = userFavoriteSong;
     }
-    ~User();
-    // i made these inline, but we can change these - jan
+    /*
+    might need these later idk
     void setName(std::string userName) { name = userName; }
     void setFaveSong(std::string song) { faveSong = song; }
+    */
     void makePlaylist();
-    void viewPlaylist();
+    void viewPlaylistSongs();
+    void viewPlaylists();
+
+    //getters need to implement ...
+
+    User::~User(); // for joseph to do hehe
 
     private:
     std::string name;
     std::string faveSong;
-    vector<Playlist> Playlist;
+    std::vector<Playlist> playlists;
 };
 
 #endif  //USER_HPP
