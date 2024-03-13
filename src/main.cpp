@@ -9,7 +9,7 @@
 using namespace std;
 
 // functions 
-void createProfileMenu(User user);
+void createProfileMenu(User &user);
 void makePlaylistMenu(User user);
 void displayMenu(User user);
 char validateInput(char choice);
@@ -74,7 +74,7 @@ void displayMenu(User user) {
     cout << "6. Quit" << endl;
 }
 
-void createProfileMenu(User user) {
+void createProfileMenu(User &user) {
   // VARIABLES
   string userName;
   string faveSong;
@@ -88,7 +88,8 @@ void createProfileMenu(User user) {
   cout << "Thank you for creating a profile!" << endl;
 
   // SET USER PROFILE
-  user(userName, faveSong);
+  User newUser(userName, faveSong);
+  user = newUser;
 }
 
 void makePlaylistMenu(User user) {
