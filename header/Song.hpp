@@ -6,26 +6,30 @@
 
 class Song {
     public: 
-    Song(std::string songTitle, std::string songGenre, std::string songArtist) {
+    Song(std::string songTitle, std::string songGenre, std::string songArtist, std::string songAlbumName) {
         title = songTitle;
         genre = songGenre;
         artist = songArtist;
+        albumName = songAlbumName;
     }
     
     Song() {
         title = "";
         genre = "";
         artist = "";
+        albumName = "";
     }
-    void printGenre();
-    void printDuration();
-    void printProducer();
-    void printAlbum();
+    
+    std::string getTitle() {return title;}
+    std::string getGenre() {return genre;}
+    std::string getArtist() {return artist;}
+    std::string getAlbumName() {return albumName;}
 
     private:
     std::string title;
     std::string genre;
     std::string artist;
+    std::string albumName;
 
 };
 
