@@ -9,29 +9,17 @@
 class User {
     
     public: 
-    User::User()
-    {
-        name = "";
-        faveSong = "";
-    }
+    User();
 
-    User::User(std::string userName, std::string userFavoriteSong)
-    {
-        name = userName;
-        faveSong = userFavoriteSong;
-    }
-    /*
-    might need these later idk
-    void setName(std::string userName) { name = userName; }
-    void setFaveSong(std::string song) { faveSong = song; }
-    */
+    User(std::string userName, std::string userFavoriteSong);
+    ~User(); // for joseph to do hehe
+    std::string getName() {return name;}
+    std::string getfaveSong() {return faveSong;}
     void addAPlaylist(std::string playlistName);
     void viewPlaylistSongs();
     void viewPlaylists();
 
     //getters need to implement ...
-
-    User::~User(); // for joseph to do hehe
 
     private:
     std::string name;

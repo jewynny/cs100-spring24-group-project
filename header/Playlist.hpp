@@ -19,7 +19,7 @@ class Playlist {
     string getPlaylistName() {return PlaylistName;}
 
     private:
-    vector<Song*> Songs;
+    vector<Song> Songs;
     std::string PlaylistName;
 
 };
