@@ -8,7 +8,7 @@
 
 using namespace std;
 
-// functions
+// functions 
 void createProfileMenu(User user);
 void makePlaylistMenu(User user);
 void displayMenu(User user, Recommendations recommendations);
