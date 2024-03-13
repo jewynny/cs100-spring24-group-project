@@ -13,7 +13,7 @@ class Playlist {
     void printSongs();
     // int findSong(); to maybe use with remove song?
     void removeSong(int index);
-    void addSongs(Song* songToAdd);
+    void addSongs(Song songToAdd);
     void getReccomendations();
     void setPlaylistName(std::string name) { PlaylistName = name; }
     string getPlaylistName() {return PlaylistName;}
