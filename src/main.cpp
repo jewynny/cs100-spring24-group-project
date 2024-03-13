@@ -1,4 +1,6 @@
+#include "../header/Song.hpp"
 #include "../header/Playlist.hpp"
+#include "../header/Recommendations.hpp"
 #include "../header/User.hpp"
 #include <iostream>
 #include <string>
@@ -6,109 +8,98 @@
 
 using namespace std;
 
-//functions
-void createProfileMenu(User profile);
-void makePlaylistMenu(User profile);        // call every time user wants to make a new playlist
-void reccomendationMenu(User profile);
-void printPlaylist(User profile);
+// functions 
+void createProfileMenu(User user);
+void makePlaylistMenu(User user);
+void displayMenu(User user);
+char validateInput(char choice);
 
-int main(){
-
+int main() {
+  // open music.csv file for recommendations
+  ifstream inputMusic;
+  inputMusic.open("musiclist.csv");
+  Recommendations recommendations;
+  recommendations.readCSV(inputMusic);
+  
   // VARIBLES
-  vector<User> *profiles = new vector<User>;
-  int totalProfile = 1;
-  profiles->resize(totalProfile);
+  User user;
+  char userInput;
   cout << "Welcome to Spotilike Music Recommender!";
 
-  // change index later to totalProfile and 
-  // increment when another profile is made
-  (*profiles)[0] = User();
-  
-  createProfileMenu(profiles->at(0));
-  makePlaylistMenu(profiles->at(0));
-  reccomendationMenu(profiles->at(0));
-  printPlaylist(profiles->at(0));
-  totalProfile++;
-  
-  //create new profiles
-
-  cout << "Would you like to create another profile? (y/n)";
-  string anotherProfile;
-  cin >> anotherProfile;
-  while (anotherProfile=="y"){
-    (*profiles)[totalProfile] = User();
-    createProfileMenu(profiles->at(totalProfile)); 
-    makePlaylistMenu(profiles->at(totalProfile));  
-    cout << "Would you like to create another profile? (y/n)";
-    cin >> anotherProfile;
-    totalProfile++;
-  }
-
-  //switch between profiles
-  cout << "/n Please enter the profile name to choose a profile." << endl;
-  string name;
-  getline(cin, name);
-  int i = 0;
-  for(i = 0; i<totalProfile; ++i){
-    if ((*profiles)[i].getName()==name){
-      cout << "You are in profile " << name << " right now, enjoy!"<< endl;
-      exit;
+  createProfileMenu(user);
+  while(true) {
+    displayMenu(user);
+    cin >> userInput;
+    char choice = validateInput(userInput);
+    
+      if (choice == '1'){
+        makePlaylistMenu(user);
+       }
+      else if (choice == '2'){
+        user.viewPlaylists();
+      }
+      else if (choice == '3'){
+         // to do (joseph)
+      }
+      else if (choice == '4'){
+        // to do (fiona)
+      }
+      else if (choice == '5'){
+        recommendations.getRecommendations(); // still have to implement this
+      }
+      else if (choice == '6'){
+        break;
+      }
+      
     }
-  }
-
-  cout << "Would you like to see the playlists that are tied to your profile? y or n " << endl;
-  string seePlaylists;
-  cin >> seePlaylists;
-  if (seePlaylists == "y"){
-    (*profiles)[i].viewPlaylists();
-  }
-
-return 0;
+  return 0;
 }
 
-void createProfileMenu(User profile)
-{
-    // VARIABLES
-    string userName;
-    string faveSong;
 
-    // PROMPT USER
-    cout << "Please create a user profile.\n";
-    cout << "Name: ";
-    getline(cin, userName);
-    cout << "\nFavorite song: ";
-    getline(cin, faveSong);
-    cout << "Thank you for creating a profile!" << endl;
 
-    // SET USER PROFILE
-    User(userName, faveSong); 
+char validateInput(char choice) {
+    while (choice <= 48 || choice >= 55) {
+      cout << "Please enter a valid choice 1-6." << endl;
+    }
+  return choice;
 }
 
-void makePlaylistMenu(User profile) {
+void displayMenu(User user) {
+    cout << "Hello " << user.getName() <<  " please select an action" << endl;
+    cout << "1. Create a playlist" << endl;
+    cout << "2. View playlists" << endl;
+    cout << "3. Add songs to playlist" << endl;
+    cout << "4. Delete songs from a playlist" << endl;
+    cout << "5. Get recommendations" << endl;
+    cout << "6. Quit" << endl;
+}
+
+void createProfileMenu(User user) {
+  // VARIABLES
+  string userName;
+  string faveSong;
+
+  // PROMPT USER
+  cout << "Please create a user profile.\n";
+  cout << "Name: ";
+  getline(cin, userName);
+  cout << "\nFavorite song: ";
+  getline(cin, faveSong);
+  cout << "Thank you for creating a profile!" << endl;
+
+  // SET USER PROFILE
+  user(userName, faveSong);
+}
+
+void makePlaylistMenu(User user) {
   // VARIABLES
   string playlistName;
-  
+
   // PROMPT USER
-  cout << "Hello " << profile.getName() << endl;
+  cout << "Hello " << user.getName() << endl;
   cout << "Enter the name of your playlist: ";
   getline(cin, playlistName);
-  profile.addAPlaylist(playlistName);
-}
 
-void reccomendationsMenu(User profile){
-  // VARIABLES
-  string reccomendation;
-  
-  // PROMPT USER
-  cout << "Song recomenndations based on your favorite song:" << endl;
-  for (int i=1;i<=10;i++){
-    cout << i << ". " << reccomendation << endl;
-  }
-}
-
-void printPlaylist(User profile){
-  // VARIABLES
-  
-  // PROMPT USER
-  cout << "Playlist : " << playlist.getName();
+  // call make playlist (?)
+  user.addAPlaylist(playlistName);
 }
