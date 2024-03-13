@@ -1,19 +1,33 @@
 #include "../header/Recommendations.hpp"
+#include <fstream>
+#include <sstream>
+#include <algorithm>
+#include <iostream>
+#include <cstdlib>
 
-void Recommendations::readCSV(istream &input, vector< vector<string> > &output)
+using namespace std;
+
+// Reads The Song From A Vector And Puts It Into The Song Vector
+void Recommendations::readCSV(ifstream& input) 
 {
-    string csvLine;
-    // read every line
-    while ( getline(input, csvLine) )
+    string line;
+   // Skip Header Of CSV File
+    getline(input, line);
+
+    while (getline(input, line)) 
     {
-        istringstream csvStream(csvLine);
-        vector<string> csvColumn;
-        string csvElement;
-        // elements are separated by commas
-        while ( getline(csvStream, csvElement, ',') )
-        {
-            csvColumn.push_back(csvElement);
-        }
-        output.push_back(csvColumn);
+        stringstream in(line);
+        string artist, albumName, songName, genre;
+        getline(in, artist, ',');
+        getline(in, albumName, ',');
+        getline(in, songName, ',');
+        getline(in, genre);
+        
+        newSongs.emplace_back(artist, albumName, songName, genre);
     }
+}
+
+vector<Song> Recommendations::getRecommendations()
+{
+    return newSongs;
 }
