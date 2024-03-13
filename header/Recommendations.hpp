@@ -11,11 +11,11 @@ using namespace std;
 
 class Recommendations {
     public: 
-    void addToPlaylist();
-    void readCSV(istream &input, vector< vector<string> > &output);
+    void readCSV(ifstream &input);
+    vector<Song> getRecommendations();
 
     private:
-    std::list<Song*> newSongs;
+    vector<Song> newSongs;
 
 };
 
