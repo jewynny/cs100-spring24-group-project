@@ -3,6 +3,18 @@
 #include <vector>
 using namespace std;
 
+ User::User()
+{
+    name = "";
+    faveSong = "";
+}
+
+User::User(std::string userName, std::string userFavoriteSong)
+{
+    name = userName;
+    faveSong = userFavoriteSong;
+}
+
 User::~User(){
     //delete each playlist in user's profile
     for(int i = 0; i < Playlist.size(); i++){
@@ -12,7 +24,13 @@ User::~User(){
         }
         //after deleting each song from a playlist, delete the playlist
         delete Playlist[i];
-    }   
+    }
+}   
+
+ void User::addAPlaylist(std::string playlistName) {
+    Playlist newPlaylist(playlistName);
+    playlists.push_back(newPlaylist);
+ }
 
 void User::viewPlaylists(){
     cout << "Here's the list of playlists that you created on your profile: /n";
