@@ -23,18 +23,20 @@ void Recommendations::readCSV(ifstream& input)
         getline(in, albumName, ',');
         getline(in, songName, ',');
         getline(in, genre);
-        
-        newSongs.emplace_back(artist, albumName, songName, genre);
+        // initialize song object
+        Song newSong(songName, genre, artist, albumName);
+        // push into vector of songs
+        newSongs.push_back(newSong);
     }
 }
 
 void Recommendations::getRecommendations()
 {
-    cout << "Here are 10 recommended songs, enjoy!" << endl;
+    cout << "Here are 10 recommended songs." << endl;
     random_unique(newSongs.begin(), newSongs.end(), 10);
     for (int i = 0; i < 10; ++i)
     {
-        cout << i+1 << ". " << newSongs[i] << endl;
+        cout << i+1 << ". " << newSongs[i].getArtist() << " - " << newSongs[i].getTitle() << endl;
     }
 }
 
