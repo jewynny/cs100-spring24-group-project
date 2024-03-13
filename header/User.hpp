@@ -9,17 +9,9 @@
 class User {
     
     public: 
-    User::User()
-    {
-        name = "";
-        faveSong = "";
-    }
+    User();
 
-    User::User(std::string userName, std::string userFavoriteSong)
-    {
-        name = userName;
-        faveSong = userFavoriteSong;
-    }
+    User(std::string userName, std::string userFavoriteSong);
     /*
     might need these later idk
     void setName(std::string userName) { name = userName; }
