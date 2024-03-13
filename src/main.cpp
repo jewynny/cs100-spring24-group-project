@@ -11,22 +11,25 @@ using namespace std;
 // functions 
 void createProfileMenu(User user);
 void makePlaylistMenu(User user);
-void displayMenu(User user, Recommendations recommendations);
+void displayMenu(User user);
 char validateInput(char choice);
 
 int main() {
   // open music.csv file for recommendations
   ifstream inputMusic;
   inputMusic.open("musiclist.csv");
-  readCSV(inputMusic);
   Recommendations recommendations;
+  recommendations.readCSV(inputMusic);
+  
   // VARIBLES
   User user;
+  char userInput;
   cout << "Welcome to Spotilike Music Recommender!";
 
   createProfileMenu(user);
   while(true) {
     displayMenu(user);
+    cin >> userInput;
     char choice = validateInput(userInput);
     
       if (choice == '1'){
@@ -49,11 +52,10 @@ int main() {
       }
       
     }
-  }
-
-
   return 0;
 }
+
+
 
 char validateInput(char choice) {
     while (choice <= 48 || choice >= 55) {
