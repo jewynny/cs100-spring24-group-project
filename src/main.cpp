@@ -13,6 +13,7 @@ void createProfileMenu(User &user);
 void makePlaylistMenu(User user);
 void displayMenu(User user);
 char validateInput(char choice);
+void deleteSongs (User user);
 
 int main() {
   // open music.csv file for recommendations
@@ -42,7 +43,7 @@ int main() {
          // to do (joseph)
       }
       else if (choice == '4'){
-        // to do (fiona)
+        deleteSongs(user);
       }
       else if (choice == '5'){
         recommendations.getRecommendations(); // still have to implement this
@@ -104,3 +105,20 @@ void makePlaylistMenu(User user) {
   // call make playlist (?)
   user.addAPlaylist(playlistName);
 }
+
+void deleteSongs (User user){
+  string listName;
+  int songIndex;
+  int listIndex = 0;
+  cout << "Which playlist would you like to delete a song from?" << endl;
+  getline(cin, listName);
+  for (int i = 0; i < user.playlists.size(); i++){
+    if (user.playlists[i].getPlaylistName() == listName){
+      listIndex = i;
+    }
+  }
+  cout << "Which song would you like to delete? please enter the song index from the playlist." << endl;
+  cin >> songIndex;
+  user.playlists[listIndex].removeSong(songIndex);
+}
+
