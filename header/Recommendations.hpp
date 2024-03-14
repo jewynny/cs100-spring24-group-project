@@ -13,6 +13,8 @@ class Recommendations {
     public: 
     void readCSV(ifstream &input);
     void getRecommendations();
+    template<class bidiiter>
+    bidiiter random_unique(bidiiter begin, bidiiter end, size_t num_random);
     
     private:
     vector<Song> newSongs;
