@@ -44,7 +44,7 @@ void Recommendations::readCSV(ifstream& input)
     }
 }
 
-void Recommendations::getRecommendations()
+void Recommendations::outputRecommendations()
 {
     cout << "Here are 10 recommended songs." << endl;
     random_unique(newSongs.begin(), newSongs.end(), 10);
@@ -54,3 +54,6 @@ void Recommendations::getRecommendations()
     }
 }
 
+Song Recommendations::getRecommendations(int index) {   // DOES NOT VALIDATE INPUT
+    return newSongs.at(index);
+}
