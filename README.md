@@ -96,7 +96,9 @@ Actions
 * Lastly, we removed the addToPlaylist function from the Recommendations class, since it was violating SRP as well. We moved it to the Playlist class instead so that each class only has one responsibility, and don't overlap with eachother. Much like the last change, the respective classes are both more concise and organized.
  
  ## Screenshots
- > Screenshots of the input/output after running your application *TODO
+ ![image](https://github.com/cs100/final-project-mwink004-jhamo001-jcara025-wye024/assets/99463753/0e952cca-cef9-4032-a2e8-ee7f117c000b)
+ ![image](https://github.com/cs100/final-project-mwink004-jhamo001-jcara025-wye024/assets/99463753/0ce05b13-23c4-463f-857c-cb814293bf80)
+
  ## Installation/Usage
  * To begin, simply clone this repository (git clone --recurse-submodules https://github.com/cs100/final-project-mwink004-jhamo001-jcara025-wye024.git) Then run the commands: "cmake ." , "make" and run the playlist executable with "./playlist".
  ## Testing
