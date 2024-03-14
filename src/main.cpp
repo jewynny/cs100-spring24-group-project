@@ -31,6 +31,7 @@ int main() {
   while(true) {
     displayMenu(user);
     cin >> userInput;
+    cin.ignore();
     char choice = validateInput(userInput);
     
       if (choice == '1'){
@@ -40,13 +41,21 @@ int main() {
         user.viewPlaylists();
       }
       else if (choice == '3'){
-         // to do (joseph)
+        string userSongTitle;
+        string userArtist;
+        cout << "What is the title of the song you'd like to add? " << endl;
+        cout << "Enter song title: ";
+        getline(cin, userSongTitle);
+        cout << "What is the artist of the song you'd like to add? " << endl;
+        cout << "Enter song artist: ";
+        getline(cin, userArtist);
+        user.addSongToPlaylist(user, userSongTitle, userArtist);
       }
       else if (choice == '4'){
         deleteSongs(user);
       }
       else if (choice == '5'){
-        recommendations.getRecommendations(); // still have to implement this
+        recommendations.outputRecommendations(); // still have to implement this
       }
       else if (choice == '6'){
         break;
@@ -98,7 +107,7 @@ void makePlaylistMenu(User& user) {
   // PROMPT USER
   //cout << "Hello " << user.getName() << endl;
   cout << "Enter the name of your playlist: ";
-  cin.ignore();
+  // cin.ignore();
   getline(cin, playlistName);
 
   // call make playlist (?)
@@ -106,18 +115,18 @@ void makePlaylistMenu(User& user) {
 }
 
 void deleteSongs (User user){
-  string listName;
-  int songIndex;
-  int listIndex = 0;
-  cout << "Which playlist would you like to delete a song from?" << endl;
-  getline(cin, listName);
-  for (int i = 0; i < user.playlists.size(); i++){
-    if (user.playlists[i].getPlaylistName() == listName){
-      listIndex = i;
-    }
-  }
-  cout << "Which song would you like to delete? please enter the song index from the playlist." << endl;
-  cin >> songIndex;
-  user.playlists[listIndex].removeSong(songIndex);
+  // string listName;
+  // int songIndex;
+  // int listIndex = 0;
+  // cout << "Which playlist would you like to delete a song from?" << endl;
+  // getline(cin, listName);
+  // for (int i = 0; i < user.playlistSize(); i++){
+  //   if (user.playlists[i].getPlaylistName() == listName){
+  //     listIndex = i;
+  //   }
+  // }
+  // cout << "Which song would you like to delete? please enter the song index from the playlist." << endl;
+  // cin >> songIndex;
+  // user.playlists[listIndex].removeSong(songIndex);
 }
 
