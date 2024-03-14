@@ -8,6 +8,10 @@ TEST(TESTSUITE, TESTTITLE) {
     // template
 }
 
+TEST(PlaylistTests, testConstructor) {
+    Playlist aPlaylist("songname");
+    EXPECT_EQ(aPlaylist.getPlaylistName(), "songname");
+}
 
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
