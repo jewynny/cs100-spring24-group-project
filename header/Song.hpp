@@ -13,6 +13,11 @@ class Song {
         albumName = songAlbumName;
     }
     
+    Song(std::string songTitle, std::string songArtist) {
+        title = songTitle;
+        artist = songArtist;
+    }
+
     Song() {
         title = "";
         genre = "";

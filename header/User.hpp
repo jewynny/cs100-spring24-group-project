@@ -11,19 +11,21 @@ class User {
     public: 
     User();
 
-    User(std::string userName);
+    User(std::string userName, std::string userFavoriteSong);
     ~User(); // for joseph to do hehe
     std::string getName() {return name;}
+    std::string getfaveSong() {return faveSong;}
     void addAPlaylist(std::string playlistName);
     void viewPlaylistSongs();
     void viewPlaylists();
-    std::vector<Playlist> playlists;
+    void addSongToPlaylist(User&,string,string); //for joseph to do hehe
 
     //getters need to implement ...
 
     private:
     std::string name;
-    
+    std::string faveSong;
+    std::vector<Playlist> playlists;
 };
 
 #endif  //USER_HPP
