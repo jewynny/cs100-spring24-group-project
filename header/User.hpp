@@ -17,13 +17,11 @@ class User {
     void addAPlaylist(std::string playlistName);
     void viewPlaylistSongs();
     void viewPlaylists();
-    std::vector<Playlist> playlists;
-
-    //getters need to implement ...
+    void addSongToPlaylist(User&,string,string); //for joseph to do hehe
 
     private:
     std::string name;
-    
+    std::vector<Playlist> playlists;
 };
 
 #endif  //USER_HPP

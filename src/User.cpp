@@ -1,4 +1,6 @@
 #include "../header/User.hpp"
+#include "../header/Playlist.hpp"
+#include "../header/Reccomendations.hpp"
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -25,7 +27,7 @@ User::~User(){
     // }
 }   
 
- void User::addAPlaylist(std::string playlistName) {
+void User::addAPlaylist(std::string playlistName) {
     Playlist newPlaylist(playlistName);
     playlists.push_back(newPlaylist);
     cout << "Playlist \"" << playlistName << "\" created." << endl;
@@ -40,4 +42,14 @@ void User::viewPlaylists(){
     for (int i = 0; i<playlists.size(); i++){
         cout << i+1 << ": " << playlists.at(i).getPlaylistName() << endl;
     }
+}
+
+void User::addSongToPlaylist(User& user, string songTitle, string songArtist){
+    cout << "Which playlist would you like to add a song to?" << endl;
+    viewPlaylists();
+    char playlistNum;
+    cin >> playlistNum;
+    //input validation
+    Song newSong(songTitle,songArtist);
+    user.playlists.at(static_cast<int>(playlistNum) - 1).addSongs(newSong);
 }
