@@ -8,7 +8,7 @@
 
 using namespace std;
 
-// fisher yates algorithm, choose m random elements from a vector with n elements
+// fisher yates algorithm, choose m random elements from a vector with n elements 
 template<class bidiiter>
 bidiiter random_unique(bidiiter begin, bidiiter end, size_t num_random) {
     size_t left = std::distance(begin, end);
