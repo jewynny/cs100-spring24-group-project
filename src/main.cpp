@@ -10,7 +10,7 @@ using namespace std;
 
 // functions 
 void createProfileMenu(User &user);
-void makePlaylistMenu(User user);
+void makePlaylistMenu(User &user);
 void displayMenu(User user);
 char validateInput(char choice);
 void deleteSongs (User user);
@@ -91,12 +91,12 @@ void createProfileMenu(User &user) {
   user = newUser;
 }
 
-void makePlaylistMenu(User user) {
+void makePlaylistMenu(User& user) {
   // VARIABLES
   string playlistName;
 
   // PROMPT USER
-  cout << "Hello " << user.getName() << endl;
+  //cout << "Hello " << user.getName() << endl;
   cout << "Enter the name of your playlist: ";
   cin.ignore();
   getline(cin, playlistName);

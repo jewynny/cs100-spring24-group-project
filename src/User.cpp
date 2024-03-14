@@ -28,6 +28,7 @@ User::~User(){
  void User::addAPlaylist(std::string playlistName) {
     Playlist newPlaylist(playlistName);
     playlists.push_back(newPlaylist);
+    cout << "Playlist \"" << playlistName << "\" created." << endl;
  }
 
 void User::viewPlaylists(){
