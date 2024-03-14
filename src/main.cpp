@@ -55,7 +55,7 @@ int main() {
         deleteSongs(user);
       }
       else if (choice == '5'){
-        recommendations.outputRecommendations(); // still have to implement this
+        recommendations.getRecommendations(); // still have to implement this
       }
       else if (choice == '6'){
         break;

@@ -12,11 +12,8 @@ using namespace std;
 class Recommendations {
     public: 
     void readCSV(ifstream &input);
-    void outputRecommendations();
-    Song getRecommendations(int index);
-    template<class bidiiter>
-    bidiiter random_unique(bidiiter begin, bidiiter end, size_t num_random);
-
+    void getRecommendations();
+    
     private:
     vector<Song> newSongs;
 
