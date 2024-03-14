@@ -33,9 +33,12 @@ User::~User(){
  }
 
 void User::viewPlaylists(){
-    cout << "Here's the list of playlists that you created on your profile: /n";
+    cout << "Here's the list of playlists that you created on your profile: " << endl;
+    if(playlists.size() == 0)
+    {
+        cout << "You have no playlists." << endl;
+    }
     for (int i = 0; i<playlists.size(); i++){
         cout << i+1 << ": " << playlists.at(i).getPlaylistName() << endl;
     }
-    cout << "Enjoy!" << endl;
 }

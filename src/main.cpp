@@ -25,7 +25,7 @@ int main() {
   // VARIBLES
   User user;
   char userInput;
-  cout << "Welcome to Spotilike Music Recommender!";
+  cout << "Welcome to Spotilike Music Recommender! ";
 
   createProfileMenu(user);
   while(true) {
@@ -66,7 +66,7 @@ char validateInput(char choice) {
 }
 
 void displayMenu(User user) {
-    cout << "Hello " << user.getName() <<  " please select an action" << endl;
+    cout << "Hello " << user.getName() <<  ", please select an action: " << endl;
     cout << "1. Create a playlist" << endl;
     cout << "2. View playlists" << endl;
     cout << "3. Add songs to playlist" << endl;
@@ -100,6 +100,7 @@ void makePlaylistMenu(User user) {
   // PROMPT USER
   cout << "Hello " << user.getName() << endl;
   cout << "Enter the name of your playlist: ";
+  cin.ignore();
   getline(cin, playlistName);
 
   // call make playlist (?)
