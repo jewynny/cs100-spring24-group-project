@@ -13,7 +13,6 @@ class Recommendations {
     public: 
     void readCSV(ifstream &input);
     void getRecommendations();
-
     private:
     vector<Song> newSongs;
 

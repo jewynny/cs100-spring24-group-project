@@ -8,6 +8,20 @@
 
 using namespace std;
 
+// fisher yates algorithm, choose m random elements from a vector with n elements
+template<class bidiiter>
+bidiiter random_unique(bidiiter begin, bidiiter end, size_t num_random) {
+    size_t left = std::distance(begin, end);
+    while (num_random--) {
+        bidiiter r = begin;
+        std::advance(r, rand()%left);
+        std::swap(*begin, *r);
+        ++begin;
+        --left;
+    }
+    return begin;
+}
+
 // Reads The Song From A Vector And Puts It Into The Song Vector
 void Recommendations::readCSV(ifstream& input) 
 {
@@ -40,16 +54,3 @@ void Recommendations::getRecommendations()
     }
 }
 
-// fisher yates algorithm, choose m random elements from a vector with n elements
-template<class bidiiter>
-bidiiter random_unique(bidiiter begin, bidiiter end, size_t num_random) {
-    size_t left = std::distance(begin, end);
-    while (num_random--) {
-        bidiiter r = begin;
-        std::advance(r, rand()%left);
-        std::swap(*begin, *r);
-        ++begin;
-        --left;
-    }
-    return begin;
-}
