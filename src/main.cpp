@@ -84,12 +84,10 @@ void createProfileMenu(User &user) {
   cout << "Please create a user profile.\n";
   cout << "Name: ";
   getline(cin, userName);
-  cout << "\nFavorite song: ";
-  getline(cin, faveSong);
   cout << "Thank you for creating a profile!" << endl;
 
   // SET USER PROFILE
-  User newUser(userName, faveSong);
+  User newUser(userName);
   user = newUser;
 }
 

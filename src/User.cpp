@@ -6,13 +6,11 @@ using namespace std;
  User::User()
 {
     name = "";
-    faveSong = "";
 }
 
-User::User(std::string userName, std::string userFavoriteSong)
+User::User(std::string userName)
 {
     name = userName;
-    faveSong = userFavoriteSong;
 }
 
 User::~User(){
