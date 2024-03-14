@@ -94,19 +94,11 @@ Actions
 * We also updated the class diagram by removing the makePlaylist function from User. This is because before, it was violating the single responsibility principle (SRP). The user's job is to hold its playlists, not make them. So, we moved makePlaylist to the Playlist class where it belongs, since that is the classes job to handle playlists.
 * Similarly, we moved the getRecommendations function from the Playlist class to the Recommendation class. The playlist class violated SRP since it was managing both playlists and recommendations. Now, functions are not needlessly mixed up and everything is more organized. By standardizing the vocabulary, stakeholders for example (or for us, all project members) can better understand the expectations for the respective classes. The code becomes better since there are fewer difficulties arising from needless interdependencies. 
 * Lastly, we removed the addToPlaylist function from the Recommendations class, since it was violating SRP as well. We moved it to the Playlist class instead so that each class only has one responsibility, and don't overlap with eachother. Much like the last change, the respective classes are both more concise and organized.
-
- 
- > ## Final deliverable
- > All group members will give a demo to the reader during lab time. ou should schedule your demo on Calendly with the same reader who took your second scrum meeting. The reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
- > Before the demo, you should do the following:
- > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
- > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Project board.
- > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
  
  ## Screenshots
- > Screenshots of the input/output after running your application
+ > Screenshots of the input/output after running your application *TODO
  ## Installation/Usage
- > Instructions on installing and running your application
+ * To begin, simply clone this repository (git clone --recurse-submodules https://github.com/cs100/final-project-mwink004-jhamo001-jcara025-wye024.git) Then run the commands: "cmake ." , "make" and run the playlist executable with "./playlist".
  ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
+ * We did unit tests in our test/test.cpp file with google test. Everyone wrote tests for the code they wrote and then merged it in to the file. We made sure to check the tests before pushing in our functions.
  
