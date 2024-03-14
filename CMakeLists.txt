@@ -17,7 +17,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 ADD_EXECUTABLE(runalltests
     test/test.cpp
-    src/main.cpp
     src/Playlist.cpp
     src/User.cpp
     src/Recommendations.cpp
