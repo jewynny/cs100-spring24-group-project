@@ -47,9 +47,10 @@ void User::viewPlaylists(){
 void User::addSongToPlaylist(User& user, string songTitle, string songArtist){
     cout << "Which playlist would you like to add a song to?" << endl;
     viewPlaylists();
-    char playlistNum;
+    int playlistNum;
     cin >> playlistNum;
     //input validation
-    Song newSong(songTitle,songArtist);
-    user.playlists.at(static_cast<int>(playlistNum) - 1).addSongs(newSong);
+    Song newSong(songTitle," ",songArtist," ");
+    (user.playlists.at(playlistNum - 1)).addSongs(newSong);
+    (user.playlists.at(playlistNum - 1)).showSongsInPlaylist();
 }

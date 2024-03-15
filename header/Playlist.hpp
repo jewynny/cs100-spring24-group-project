@@ -16,6 +16,7 @@ class Playlist {
     void addSongs(Song songToAdd);
     void getReccomendations();
     void setPlaylistName(std::string name) { PlaylistName = name; }
+    void showSongsInPlaylist();
     string getPlaylistName() {return PlaylistName;}
 
     private:
