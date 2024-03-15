@@ -38,18 +38,11 @@ int main() {
         makePlaylistMenu(user);
        }
       else if (choice == '2'){
+        cout << endl;
         user.viewPlaylists();
       }
       else if (choice == '3'){
-        string userSongTitle;
-        string userArtist;
-        cout << "What is the title of the song you'd like to add? " << endl;
-        cout << "Enter song title: ";
-        getline(cin, userSongTitle);
-        cout << "What is the artist of the song you'd like to add? " << endl;
-        cout << "Enter song artist: ";
-        getline(cin, userArtist);
-        user.addSongToPlaylist(user, userSongTitle, userArtist);
+        user.addSongToPlaylist(user);
       }
       else if (choice == '4'){
         user.deleteSongs(user);
@@ -77,7 +70,7 @@ char validateInput(char choice) {
 }
 
 void displayMenu(User user) {
-    cout << "Hello " << user.getName() <<  ", please select an action: " << endl;
+    cout << "\nHello " << user.getName() <<  ", please select an action: " << endl;
     cout << "1. Create a playlist" << endl;
     cout << "2. View playlists" << endl;
     cout << "3. Add songs to playlist" << endl;
@@ -96,7 +89,7 @@ void createProfileMenu(User &user) {
   cout << "Please create a user profile.\n";
   cout << "Name: ";
   getline(cin, userName);
-  cout << "Thank you for creating a profile!" << endl;
+  cout << "Profile \"" << userName << "\" created." << endl;
 
   // SET USER PROFILE
   User newUser(userName);
@@ -109,7 +102,7 @@ void makePlaylistMenu(User& user) {
 
   // PROMPT USER
   //cout << "Hello " << user.getName() << endl;
-  cout << "Enter the name of your playlist: ";
+  cout << "\nEnter the name of your playlist: ";
   // cin.ignore();
   getline(cin, playlistName);
 

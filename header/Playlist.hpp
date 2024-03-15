@@ -18,6 +18,7 @@ class Playlist {
     void setPlaylistName(std::string name) { PlaylistName = name; }
     void showSongsInPlaylist();
     string getPlaylistName() {return PlaylistName;}
+    size_t getPlaylistSize() const { return Songs.size(); } 
 
     private:
     vector<Song> Songs;

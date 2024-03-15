@@ -40,23 +40,31 @@ void User::viewPlaylists(){
         cout << "You have no playlists." << endl;
     }
     for (int i = 0; i<playlists.size(); i++){
-        cout << i+1 << ": " << playlists.at(i).getPlaylistName() << endl;
+        cout << "Playlist " << i+1 << ": " << playlists.at(i).getPlaylistName() << endl;
     }
 }
 
-void User::addSongToPlaylist(User& user, string songTitle, string songArtist){
+void User::addSongToPlaylist(User& user){
+    string userSongTitle;
+    string userArtist;
+    cout << "\nWhat is the title of the song you'd like to add? " << endl;
+    cout << "Enter song title: ";
+    getline(cin, userSongTitle);
+    cout << "What is the artist of the song you'd like to add? " << endl;
+    cout << "Enter song artist: ";
+    getline(cin, userArtist);
     cout << "Which playlist would you like to add a song to?" << endl;
     viewPlaylists();
     int playlistNum;
     cin >> playlistNum;
     //input validation
-    Song newSong(songTitle," ",songArtist," ");
+    Song newSong(userSongTitle," ",userArtist," ");
     (user.playlists.at(playlistNum - 1)).addSongs(newSong);
-    //(user.playlists.at(playlistNum - 1)).showSongsInPlaylist();
+    cout << userArtist << " - " << userSongTitle << " added to playlist " << user.playlists.at(playlistNum - 1).getPlaylistName() << endl;
 }
 
 void User::deleteSongs (User& user){
-    cout << "In which playlist would you like to remove a song?" << endl;
+    cout << "\nIn which playlist would you like to remove a song?" << endl;
     viewPlaylists();
     int playlistNum;
     cin >> playlistNum;
@@ -66,7 +74,6 @@ void User::deleteSongs (User& user){
     cin >> songNum;
     //input validation
     (user.playlists.at(playlistNum - 1)).removeSong(songNum);
-    //(user.playlists.at(playlistNum - 1)).showSongsInPlaylist();
 }
 
 void User::showSongsFromPlaylist(User& user){
