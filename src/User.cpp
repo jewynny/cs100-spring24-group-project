@@ -8,13 +8,11 @@ using namespace std;
  User::User()
 {
     name = "";
-    faveSong = "";
 }
 
-User::User(std::string userName, std::string userFavoriteSong)
+User::User(std::string userName)
 {
     name = userName;
-    faveSong = userFavoriteSong;
 }
 
 User::~User(){
@@ -29,17 +27,21 @@ User::~User(){
     // }
 }   
 
- void User::addAPlaylist(std::string playlistName) {
+void User::addAPlaylist(std::string playlistName) {
     Playlist newPlaylist(playlistName);
     playlists.push_back(newPlaylist);
+    cout << "Playlist \"" << playlistName << "\" created." << endl;
  }
 
 void User::viewPlaylists(){
-    cout << "Here's the list of playlists that you created on your profile: /n";
+    cout << "Here's the list of playlists that you created on your profile: " << endl;
+    if(playlists.size() == 0)
+    {
+        cout << "You have no playlists." << endl;
+    }
     for (int i = 0; i<playlists.size(); i++){
         cout << i+1 << ": " << playlists.at(i).getPlaylistName() << endl;
     }
-    cout << "Enjoy!" << endl;
 }
 
 void User::addSongToPlaylist(User& user, string songTitle, string songArtist){

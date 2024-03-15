@@ -53,4 +53,3 @@ void Recommendations::getRecommendations()
         cout << i+1 << ". " << newSongs[i].getArtist() << " - " << newSongs[i].getTitle() << endl;
     }
 }
-
