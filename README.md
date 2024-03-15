@@ -96,7 +96,9 @@ Actions
 * Lastly, we removed the addToPlaylist function from the Recommendations class, since it was violating SRP as well. We moved it to the Playlist class instead so that each class only has one responsibility, and don't overlap with eachother. Much like the last change, the respective classes are both more concise and organized.
  
  ## Screenshots
- ![image](https://github.com/cs100/final-project-mwink004-jhamo001-jcara025-wye024/assets/99463753/0e952cca-cef9-4032-a2e8-ee7f117c000b)
+ ![6fYUMu5](https://github.com/cs100/final-project-mwink004-jhamo001-jcara025-wye024/assets/99463753/fe5387f2-8534-451c-9913-f841b126d145)
+ ![ZB8Ods8](https://github.com/cs100/final-project-mwink004-jhamo001-jcara025-wye024/assets/99463753/e9b1da06-3c12-4e94-88e4-b43efabec0c6)
+ ![6N096xJ](https://github.com/cs100/final-project-mwink004-jhamo001-jcara025-wye024/assets/99463753/21c6fdcf-582c-42a1-8540-de41ac595d06)
  ![image](https://github.com/cs100/final-project-mwink004-jhamo001-jcara025-wye024/assets/99463753/0ce05b13-23c4-463f-857c-cb814293bf80)
 
  ## Installation/Usage
