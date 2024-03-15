@@ -58,13 +58,29 @@ TEST(PlaylistTests, testParametrizedConstructor) {
 }
 
 TEST(PlaylistTests, testAddSong) {
-    
+    Playlist playlist("My Playlist");  // Create a playlist object
+    Song songToAdd("Song Title", "Artist Name");  // Create a song object
+
+    // Add the song to the playlist
+    playlist.addSongs(songToAdd);
+
+    // Check if the song is added successfully by checking the size of the playlist
+    EXPECT_EQ(playlist.getPlaylistSize(), 1);
 }
 
 TEST(PlaylistTests, testRemoveSong) {
-    
-}
+    Playlist playlist("My Playlist"); 
+    Song songToAdd("Song Title", "Artist Name"); 
 
+    // Add the song to the playlist
+    playlist.addSongs(songToAdd);
+
+    // Remove the song from the playlist
+    playlist.removeSong(0);  // Assuming the index is correct
+
+    // Check if the song is removed successfully by checking the size of the playlist
+    EXPECT_EQ(playlist.getPlaylistSize(), 0);
+}
 
 /*TEST(RecommendationTests, testRandom) {
     Recommendations rec;
