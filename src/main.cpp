@@ -72,6 +72,8 @@ int main() {
 char validateInput(char choice) {
     while (choice <= 48 || choice >= 56) {
       cout << "Please enter a valid choice 1-7." << endl;
+      cin >> choice;
+      cin.ignore();
     }
   return choice;
 }
