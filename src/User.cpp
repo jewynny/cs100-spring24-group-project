@@ -1,6 +1,6 @@
 #include "../header/User.hpp"
 #include "../header/Playlist.hpp"
-#include "../header/Reccomendations.hpp"
+#include "../header/Recommendations.hpp"
 #include <iostream>
 #include <vector>
 using namespace std;
