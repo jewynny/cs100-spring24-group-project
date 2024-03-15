@@ -19,6 +19,7 @@ class User {
     void viewPlaylists();
     void addSongToPlaylist(User&,string,string); //for joseph to do hehe
     void deleteSongs (User& user); 
+    void showSongsFromPlaylist(User&);
 
     private:
     std::string name;

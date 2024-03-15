@@ -52,7 +52,7 @@ void User::addSongToPlaylist(User& user, string songTitle, string songArtist){
     //input validation
     Song newSong(songTitle," ",songArtist," ");
     (user.playlists.at(playlistNum - 1)).addSongs(newSong);
-    (user.playlists.at(playlistNum - 1)).showSongsInPlaylist();
+    //(user.playlists.at(playlistNum - 1)).showSongsInPlaylist();
 }
 
 void User::deleteSongs (User& user){
@@ -66,5 +66,13 @@ void User::deleteSongs (User& user){
     cin >> songNum;
     //input validation
     (user.playlists.at(playlistNum - 1)).removeSong(songNum);
+    //(user.playlists.at(playlistNum - 1)).showSongsInPlaylist();
+}
+
+void User::showSongsFromPlaylist(User& user){
+    cout << "Which playlists' songs would you like to view?" << endl;
+    user.viewPlaylists();
+    int playlistNum; 
+    cin >> playlistNum;
     (user.playlists.at(playlistNum - 1)).showSongsInPlaylist();
 }

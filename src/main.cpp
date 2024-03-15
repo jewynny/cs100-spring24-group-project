@@ -58,6 +58,9 @@ int main() {
         recommendations.getRecommendations(); // still have to implement this
       }
       else if (choice == '6'){
+        user.showSongsFromPlaylist(user);
+      }
+      else if (choice == '7'){
         break;
       }
     }
@@ -67,8 +70,8 @@ int main() {
 
 
 char validateInput(char choice) {
-    while (choice <= 48 || choice >= 55) {
-      cout << "Please enter a valid choice 1-6." << endl;
+    while (choice <= 48 || choice >= 56) {
+      cout << "Please enter a valid choice 1-7." << endl;
     }
   return choice;
 }
@@ -80,7 +83,8 @@ void displayMenu(User user) {
     cout << "3. Add songs to playlist" << endl;
     cout << "4. Delete songs from a playlist" << endl;
     cout << "5. Get recommendations" << endl;
-    cout << "6. Quit" << endl;
+    cout << "6. Print songs of a playlist" << endl;
+    cout << "7. Quit" << endl;
 }
 
 void createProfileMenu(User &user) {
