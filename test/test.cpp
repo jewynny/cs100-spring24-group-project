@@ -67,6 +67,17 @@ TEST(PlaylistTests, testRemoveSong) {
     EXPECT_EQ(playlist.getPlaylistSize(), 0);
 }
 
+TEST(PlaylistTests, testShowSongs) {
+    Playlist playlist("My Playlist"); 
+    Song songToAdd("Song Title", "Artist Name"); 
+
+    playlist.addSongs(songToAdd);
+    
+    EXPECT_NO_THROW ( {
+        playlist.showSongsInPlaylist();
+    } );
+}
+
 /*TEST(RecommendationTests, testRandom) {
     Recommendations rec;
     vector<int> vect {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
