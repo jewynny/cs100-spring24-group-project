@@ -15,18 +15,6 @@ User::User(std::string userName)
     name = userName;
 }
 
-User::~User(){
-    // //delete each playlist in user's profile
-    // for(int i = 0; i < playlist.size(); i++){
-    //     //delete each song from a playlist before deleting a playlist
-    //     for (int j = 0; j < Songs.size(); j++){
-    //         delete Songs[j];    
-    //     }
-    //     //after deleting each song from a playlist, delete the playlist
-    //     delete Playlist[i];
-    // }
-}   
-
 void User::addAPlaylist(std::string playlistName) {
     Playlist newPlaylist(playlistName);
     playlists.push_back(newPlaylist);
@@ -57,7 +45,6 @@ void User::addSongToPlaylist(User& user){
     viewPlaylists();
     int playlistNum;
     cin >> playlistNum;
-    //input validation
     Song newSong(userSongTitle," ",userArtist," ");
     (user.playlists.at(playlistNum - 1)).addSongs(newSong);
     cout << userArtist << " - " << userSongTitle << " added to playlist " << user.playlists.at(playlistNum - 1).getPlaylistName() << endl;
@@ -72,7 +59,6 @@ void User::deleteSongs (User& user){
     cout << "Select the respective number of the song you would like to remove: ";
     int songNum;
     cin >> songNum;
-    //input validation
     (user.playlists.at(playlistNum - 1)).removeSong(songNum);
 }
 

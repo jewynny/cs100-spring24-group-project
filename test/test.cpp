@@ -4,10 +4,6 @@
 #include "../header/Recommendations.hpp"
 #include "../header/User.hpp"
 
-TEST(TESTSUITE, TESTTITLE) {
-    // template
-}
-
 TEST(UserTests, testDefaultConstructor) {
     User user;
     EXPECT_TRUE(user.getName() == "");
@@ -35,17 +31,6 @@ TEST(UserTests, testViewPlaylists) {
         user.viewPlaylists();
     } );
 }
-
-/*
-TEST(UserTests, testAddSongToPlaylist) {
-    User user;
-    string playlistName = "playlist1";
-    string songTitle = "title";
-    string artistName = "artist";
-    // . . . .
-    EXPECT_TRUE(user.playlists.size() == 1);
-}
-*/
 
 TEST(PlaylistTests, testDefaultConstructor) {
     Playlist aPlaylist;

@@ -8,10 +8,6 @@ Playlist::Playlist() {
     PlaylistName = "";
 }
 
-void Playlist::printSongs() {
-
-}
-
 void Playlist::addSongs(Song songToAdd) {
     Songs.push_back(songToAdd);
 }

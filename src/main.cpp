@@ -48,7 +48,7 @@ int main() {
         user.deleteSongs(user);
       }
       else if (choice == '5'){
-        recommendations.getRecommendations(); // still have to implement this
+        recommendations.getRecommendations(); // bugged
       }
       else if (choice == '6'){
         user.showSongsFromPlaylist(user);
@@ -100,13 +100,9 @@ void makePlaylistMenu(User& user) {
   // VARIABLES
   string playlistName;
 
-  // PROMPT USER
-  //cout << "Hello " << user.getName() << endl;
   cout << "\nEnter the name of your playlist: ";
-  // cin.ignore();
   getline(cin, playlistName);
 
-  // call make playlist (?)
   user.addAPlaylist(playlistName);
 }
 

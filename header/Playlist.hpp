@@ -10,11 +10,8 @@ class Playlist {
     public:
     Playlist(); 
     Playlist(std::string name);
-    void printSongs();
-    // int findSong(); to maybe use with remove song?
     void removeSong(int index);
     void addSongs(Song songToAdd);
-    void getReccomendations();
     void setPlaylistName(std::string name) { PlaylistName = name; }
     void showSongsInPlaylist();
     string getPlaylistName() {return PlaylistName;}
