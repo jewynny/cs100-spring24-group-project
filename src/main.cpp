@@ -52,15 +52,17 @@ int main() {
         user.addSongToPlaylist(user, userSongTitle, userArtist);
       }
       else if (choice == '4'){
-        deleteSongs(user);
+        user.deleteSongs(user);
       }
       else if (choice == '5'){
         recommendations.getRecommendations(); // still have to implement this
       }
       else if (choice == '6'){
+        user.showSongsFromPlaylist(user);
+      }
+      else if (choice == '7'){
         break;
       }
-      
     }
   return 0;
 }
@@ -68,8 +70,8 @@ int main() {
 
 
 char validateInput(char choice) {
-    while (choice <= 48 || choice >= 55) {
-      cout << "Please enter a valid choice 1-6." << endl;
+    while (choice <= 48 || choice >= 56) {
+      cout << "Please enter a valid choice 1-7." << endl;
     }
   return choice;
 }
@@ -81,7 +83,8 @@ void displayMenu(User user) {
     cout << "3. Add songs to playlist" << endl;
     cout << "4. Delete songs from a playlist" << endl;
     cout << "5. Get recommendations" << endl;
-    cout << "6. Quit" << endl;
+    cout << "6. Print songs of a playlist" << endl;
+    cout << "7. Quit" << endl;
 }
 
 void createProfileMenu(User &user) {
@@ -112,21 +115,5 @@ void makePlaylistMenu(User& user) {
 
   // call make playlist (?)
   user.addAPlaylist(playlistName);
-}
-
-void deleteSongs (User user){
-  // string listName;
-  // int songIndex;
-  // int listIndex = 0;
-  // cout << "Which playlist would you like to delete a song from?" << endl;
-  // getline(cin, listName);
-  // for (int i = 0; i < user.playlistSize(); i++){
-  //   if (user.playlists[i].getPlaylistName() == listName){
-  //     listIndex = i;
-  //   }
-  // }
-  // cout << "Which song would you like to delete? please enter the song index from the playlist." << endl;
-  // cin >> songIndex;
-  // user.playlists[listIndex].removeSong(songIndex);
 }
 

@@ -19,6 +19,9 @@ class User {
     void viewPlaylists();
     void addSongToPlaylist(User&,string,string); //for joseph to do hehe
     size_t getPlaylistSize() const { return Songs.size(); } 
+    void deleteSongs (User& user); 
+    void showSongsFromPlaylist(User&);
+
 
     private:
     std::string name;
