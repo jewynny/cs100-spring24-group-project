@@ -94,6 +94,12 @@ Actions
 * We also updated the class diagram by removing the makePlaylist function from User. This is because before, it was violating the single responsibility principle (SRP). The user's job is to hold its playlists, not make them. So, we moved makePlaylist to the Playlist class where it belongs, since that is the classes job to handle playlists.
 * Similarly, we moved the getRecommendations function from the Playlist class to the Recommendation class. The playlist class violated SRP since it was managing both playlists and recommendations. Now, functions are not needlessly mixed up and everything is more organized. By standardizing the vocabulary, stakeholders for example (or for us, all project members) can better understand the expectations for the respective classes. The code becomes better since there are fewer difficulties arising from needless interdependencies. 
 * Lastly, we removed the addToPlaylist function from the Recommendations class, since it was violating SRP as well. We moved it to the Playlist class instead so that each class only has one responsibility, and don't overlap with eachother. Much like the last change, the respective classes are both more concise and organized.
+
+## Final Deliverable (Phase IV)
+
+### Updated UML class diagram (3/15/2024)
+<img width="452" alt="Screenshot_2024-03-15_at_12 12 10_AM" src="https://github.com/cs100/final-project-mwink004-jhamo001-jcara025-wye024/assets/99463753/d140e9ab-d7cc-424e-9abb-f64a30923c7b">
+
  
  ## Screenshots
  ![6fYUMu5](https://github.com/cs100/final-project-mwink004-jhamo001-jcara025-wye024/assets/99463753/fe5387f2-8534-451c-9913-f841b126d145)
